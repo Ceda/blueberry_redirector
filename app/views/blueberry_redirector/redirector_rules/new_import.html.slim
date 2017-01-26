@@ -1,0 +1,16 @@
+= simple_form_for :redirector_rule, url: redirector_rules_imports_path do |f|
+  .content-header
+    h1
+      span.glyphicon.glyphicon-random
+      span.text =< t '.list'
+
+  .content
+    .box
+      .box-content
+        = f.input :file_import, as: :hidden
+        = f.input :file, as: :file, label: t('.file_import')
+
+      .box-footer
+        .for-horizontal-form
+          = link_to t('common.back'), redirector_rules_path, class: 'btn btn-default'
+          = f.button :submit, t('.import'), class: 'btn btn-primary'

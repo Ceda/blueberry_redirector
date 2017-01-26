@@ -1,0 +1,2 @@
+class RedirectorRule < RedirectRule
+end

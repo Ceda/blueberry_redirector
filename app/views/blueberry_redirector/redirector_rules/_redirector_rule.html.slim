@@ -1,0 +1,13 @@
+tr
+  td
+    span.glyphicon class=glyph_bool(redirector_rule.active)
+  td = redirector_rule.source
+  td = redirector_rule.destination
+  td.actions.text-right
+    = link_to [:edit, redirector_rule], class: 'btn btn-sm btn-default'
+      i.glyphicon.glyphicon-pencil
+      = t('common.edit')
+    '
+    = link_to [redirector_rule], method: :delete, class: 'btn btn-sm btn-warning'
+      i.glyphicon.glyphicon-pencil
+      = t('common.delete')

@@ -1,0 +1,46 @@
+cs:
+  activerecord:
+    attributes:
+      redirect_rule:
+        source: 'Zdroj'
+        destination: 'Cíl'
+        active: 'Aktivní'
+    models:
+      redirect_rule: 'přesměrování'
+      redirector_rule: 'přesměrování'
+  blueberry_redirector:
+    redirector_rules:
+      create:
+        success: 'Záznam přesměrování byl úspěšně vytvořen'
+      destroy:
+        success: 'Záznam přesměrování byl úspěšně smazán'
+      edit:
+        back: "Zpět"
+        edit: "Úprava přesměrování"
+      empty:
+        no_redirector_rules: "Nenalezena žádná pravidla přesměrování."
+      form:
+        main: "Hlavní informace"
+      index:
+        list: "Seznam přesměrování"
+        create: "Vytvořit přesměrování"
+        title: "Přesměrování"
+      new:
+        back: "Zpět"
+        create: "Vytvořit přesměrování"
+      new_import:
+        back: "Zpět"
+        import: "Importovat"
+        list: "Importovat přesměrování z xlsx"
+        file_import: 'Soubor s přesměrováním (xlsx)'
+      update:
+        success: 'Záznam přesměrování byl úspěšně upraven'
+    redirector_rules_imports:
+      create:
+        wrong_format: 'Záznamy přesměrování nemohly být naimportovány, špatný formát souboru.'
+        success: 'Import záznamů přesměrování proběhl úspěšně'
+  layouts:
+    blueberry_redirector:
+      application:
+        redirector_rules: 'Přesměrování'
+        main_app: 'Hlavní administrace'

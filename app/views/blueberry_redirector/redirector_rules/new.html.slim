@@ -1,0 +1,14 @@
+= simple_form_for @redirector_rule do |f|
+  .content-header
+    h1
+      span.glyphicon.glyphicon-random
+      span.text =< t '.create'
+
+  .content
+    .box
+      .box-content
+        = render 'form', f: f
+      .box-footer
+        .for-horizontal-form
+          = link_to t('common.back'), redirector_rules_path, class: 'btn btn-default'
+          = f.button :submit, class: 'btn btn-primary'

@@ -1,0 +1,34 @@
+.content-header
+  h1
+    span.glyphicon.glyphicon-random
+    span.text =< t '.title'
+
+  ol.breadcrumb
+    li = link_to t('admin.common.home'), main_app.admin_root_path
+    li.active
+      strong =< t '.title'
+
+.content
+  .box
+    .box-header
+      .heading
+        h3 = t('.list')
+      .actions
+        = link_to new_redirector_rules_import_path, class: 'btn btn-primary'
+          .glyphicon.glyphicon-random
+          = t('.import')
+        '
+        = link_to new_redirector_rule_path, class: 'btn btn-success'
+          .glyphicon.glyphicon-plus
+          = t('.create')
+
+    .box-content
+      table.table.table-striped
+        thead
+          tr
+            th = RedirectorRule.human_attribute_name :active
+            th = RedirectorRule.human_attribute_name :source
+            th = RedirectorRule.human_attribute_name :destination
+            th
+        tbody
+          = render(@redirector_rules) || render('empty')

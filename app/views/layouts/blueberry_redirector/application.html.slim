@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    = metamagic site: 'Admin - Přesměrování',
+      title: [:title, :site],
+      separator: ' – '
+    meta charset='utf-8'
+    meta name='viewport' content='width=device-width, initial-scale=1.0'
+    = stylesheet_link_tag :admin, media: 'all'
+    = csrf_meta_tags
+
+  body class=body_class
+    .wrapper
+      .sidebar
+        ul.sidebar-menu
+          li.logo = link_to image_tag('admin/blueberry-logo.png'), main_app.admin_root_path
+          li = link_to t('.main_app'), main_app.admin_root_path
+          li = link_to t('.redirector_rules'), [:redirector_rules]
+
+      .content-wrapper
+        .header
+          nav.navbar.navbar-static-top role="navigation"
+            .navbar-custom-menu
+              ul.nav.navbar-nav
+                li
+                  = link_to '#'
+                    i.glyphicon.glyphicon-user>
+                    span.role = current_administrator.email.split('@').first
+                li
+                  = link_to main_app.destroy_administrator_session_path, method: :delete, title: t('.logout')
+                    i.glyphicon.glyphicon-log-out
+
+        = render 'application/flashes'
+        = yield
+
+    = javascript_include_tag :admin
+    = yield :javascript
