@@ -1,5 +1,5 @@
-require "blueberry_redirector/engine"
-require "redirector"
+require 'blueberry_redirector/engine'
+require 'redirector'
 
 module BlueberryRedirector
 end
