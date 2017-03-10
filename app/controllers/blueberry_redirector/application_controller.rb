@@ -2,7 +2,7 @@ module BlueberryRedirector
   class ApplicationController < ActionController::Base
     protect_from_forgery with: :exception
 
-    layout 'blueberry_redirector/application'
+    layout 'blueberry_redirector/admin'
     helper BlueberryRedirector::RedirectorHelper
   end
 end

@@ -19,8 +19,7 @@ module BlueberryRedirector
       end
     end
 
-    def edit
-    end
+    def edit; end
 
     def update
       if @redirector_rule.update_attributes redirector_rule_params
@@ -43,7 +42,8 @@ module BlueberryRedirector
 
     def redirector_rule_params
       params.require(:redirector_rule)
-            .permit(:source, :destination, :active)
+            .permit(:source, :destination, :active, :source_is_regex,
+                    :source_is_case_sensitive)
     end
   end
 end

@@ -4,6 +4,10 @@ module BlueberryRedirector
   class Engine < ::Rails::Engine
     isolate_namespace BlueberryRedirector
 
+    config.to_prepare do
+      BlueberryRedirector::ApplicationController.helper Rails.application.helpers
+    end
+
     engine_name 'redirector'
 
     initializer 'redirector.apply_options' do |app|

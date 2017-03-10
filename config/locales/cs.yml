@@ -5,6 +5,8 @@ cs:
         source: 'Zdroj'
         destination: 'Cíl'
         active: 'Aktivní'
+        source_is_regex: Zdroj je regulární výrazy
+        source_is_case_sensitive: Zdroj je citlivý na velikost písma
     models:
       redirect_rule: 'přesměrování'
       redirector_rule: 'přesměrování'
