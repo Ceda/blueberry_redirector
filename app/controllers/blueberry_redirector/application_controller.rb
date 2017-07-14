@@ -1,5 +1,5 @@
 module BlueberryRedirector
-  class ApplicationController < ActionController::Base
+  class ApplicationController < Admin::BaseController
     protect_from_forgery with: :exception
 
     layout 'blueberry_redirector/admin'
