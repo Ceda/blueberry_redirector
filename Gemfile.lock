@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    blueberry_redirector (0.1.5)
+    blueberry_redirector (0.1.6)
       rails (>= 5)
       roo
       simplify_redirector (~> 1.0.1)
