@@ -7,13 +7,24 @@ How to use my plugin.
 ## Installation
 1. Add this to your Gemfile and then `bundle install`:
 
-    ```ruby  
+    ```ruby
     gem 'blueberry_redirector'
     ```
 
 2. `$ rake redirector:install:migrations`
 3. `$ rake db:migrate`
+4. Customize
+    Initializer
+    ```ruby
+    BlueberryRedirector.config do |config|
+      # config.admin_controller = 'Admin::BaseController'
+    end
+    ```
 
+    Add link to your layout
+    ```ruby
+    = link_to t('.redirector'), admin_redirector.root_path
+    ```
 
 ## Contributing
 Contribution directions go here.
