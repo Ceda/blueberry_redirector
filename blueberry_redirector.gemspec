@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", ">= 5"
   s.add_dependency "roo"
-  s.add_dependency "simplify_redirector", "~> 1.0.1"
+  s.add_dependency "redirector", "~> 1.1.1"
   s.add_dependency "virtus"
 
   s.add_development_dependency "sqlite3"
